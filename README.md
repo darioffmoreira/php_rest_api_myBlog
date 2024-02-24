@@ -39,27 +39,28 @@ This is a simple PHP REST API for managing blog posts.
 ## Usage
 
 ### Read All Posts
-- To retrieve all blog posts, make a GET request to:
+1. To retrieve all blog posts, make a GET request to:
 
 ```bash
 http://localhost/php_rest_myBlog/api/post/read.php
 ```
 
 ### Read Single Post
-- To retrieve a single blog post, make a GET request with the post ID as a query parameter:
+1. To retrieve a single blog post, make a GET request with the post ID as a query parameter:
 
 ```bash
 http://localhost/php_rest_myBlog/api/post/read_single.php?id=3
 ```
 
 ### Create a new post
-- To create a new blog post, make a POST request to:
+1. To create a new blog post, make a POST request to:
 
 ```bash
 http://localhost/php_rest_myBlog/api/post/create.php
 ```
 
-- Include the post details in the request body as a JSON object:
+2. Include the post details in the request body as a JSON object:
+   
 ```json
 {
     "title": "Your Post Title",
@@ -86,13 +87,13 @@ http://localhost/php_rest_myBlog/api/post/create.php
 ```
 
 ### Update a Post
-- To update an existing blog post, make a PUT request to:
-- 
+1. To update an existing blog post, make a PUT request to:
+  
 ```bash
 http://localhost/php_rest_myBlog/api/post/update.php
 ```
 
-- Include the post details and the post ID in the request body as a JSON object:
+2. Include the post details and the post ID in the request body as a JSON object:
 
 ```json
 {
@@ -116,8 +117,7 @@ To retrieve information about a specific blog post using a GET request, you can 
 http://localhost/php_rest_myBlog/api/post/read_single.php?id=15
 ```
 
-.............
-
+keeping working ...
 
 
 ## License
