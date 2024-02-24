@@ -9,7 +9,10 @@ This is a simple PHP REST API for managing blog posts.
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-    - [Testing with Postman](#testing-with-postman)
+  - [Usage](#usage)
+    - [Read All Posts](#read-all-posts)
+    - [Read Single Post](#read-single-post)
+  - [License](#license)
 
 ## Features
 - Retrieve blog posts via a RESTful API.
@@ -30,17 +33,25 @@ This is a simple PHP REST API for managing blog posts.
   git clone https://github.com/darioffmoreira/php_rest_myBlog.git
 ```
 
-### Testing with Postman
+## Usage
 
-To test the API endpoints using Postman, follow these steps:
-
-1. Ensure that your XAMPP or PHP development environment is running, and the MySQL database is set up.
-
-2. Open Postman and set the request type to "GET."
-
-3. Use the following URL to test the 'read' endpoint, which retrieves all blog posts:
+### Read All Posts
+- To retrieve all blog posts, make a GET request to:
 
 ```bash
-  http://localhost/php_rest_myBlog/api/post/read.php
+http://localhost/php_rest_myBlog/api/post/read.php
 ```
-4. Send the request to see the response from the API.
+
+### Read Single Post
+- To retrieve a single blog post, make a GET request with the post ID as a query parameter:
+
+```bash
+http://localhost/php_rest_myBlog/api/post/read_single.php?id=3
+```
+
+...
+
+
+
+## License
+- This project is licensed under the MIT License.
