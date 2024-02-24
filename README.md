@@ -14,7 +14,8 @@ This is a simple PHP REST API for managing blog posts.
     - [Read Single Post](#read-single-post)
     - [Create a new post](#create-a-new-post)
     - [Update a Post](#update-a-post)
-      - [Check Specific Information from ID 15](#check-specific-information-from-id-15)
+      - [Check data](#check-data)
+    - [Delete a Post](#delete-a-post)
   - [License](#license)
 
 ## Features
@@ -105,7 +106,7 @@ http://localhost/php_rest_myBlog/api/post/update.php
 }
 ```
 
-#### Check Specific Information from ID 15
+#### Check data
 
 To retrieve information about a specific blog post using a GET request, you can follow these steps:
 
@@ -117,8 +118,23 @@ To retrieve information about a specific blog post using a GET request, you can 
 http://localhost/php_rest_myBlog/api/post/read_single.php?id=15
 ```
 
-keeping working ...
+### Delete a Post
 
+To delete an existing blog post, make a DELETE request to:
+
+```bash
+http://localhost/php_rest_myBlog/api/post/delete.php
+```
+
+- Include the post ID in the request body as a JSON object:
+  
+```json
+{
+    "id": "15"
+}
+```
+
+keeping working ...
 
 ## License
 - This project is licensed under the MIT License.
