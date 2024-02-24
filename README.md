@@ -12,6 +12,7 @@ This is a simple PHP REST API for managing blog posts.
   - [Usage](#usage)
     - [Read All Posts](#read-all-posts)
     - [Read Single Post](#read-single-post)
+    - [Create a new post](#create-a-new-post)
   - [License](#license)
 
 ## Features
@@ -49,7 +50,42 @@ http://localhost/php_rest_myBlog/api/post/read.php
 http://localhost/php_rest_myBlog/api/post/read_single.php?id=3
 ```
 
-...
+### Create a new post
+- To create a new blog post, make a POST request to:
+
+```bash
+http://localhost/php_rest_myBlog/api/post/create.php
+```
+
+- Include the post details in the request body as a JSON object:
+```json
+{
+    "title": "Your Post Title",
+    "body": "Your post content goes here.",
+    "author": "Author Name",
+    "category_id": "1"
+}
+```
+
+- A successful creation will return a JSON response:
+
+```json
+{
+    "message": "Post Created!"
+}
+```
+
+- In case of an error:
+
+```json
+{
+    "message": "Post not created!"
+}
+```
+
+ 
+ 
+......
 
 
 
