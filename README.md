@@ -13,6 +13,8 @@ This is a simple PHP REST API for managing blog posts.
     - [Read All Posts](#read-all-posts)
     - [Read Single Post](#read-single-post)
     - [Create a new post](#create-a-new-post)
+    - [Update a Post](#update-a-post)
+      - [Check Specific Information from ID 15](#check-specific-information-from-id-15)
   - [License](#license)
 
 ## Features
@@ -45,17 +47,13 @@ http://localhost/php_rest_myBlog/api/post/read.php
 
 ### Read Single Post
 - To retrieve a single blog post, make a GET request with the post ID as a query parameter:
-
-```bash
-http://localhost/php_rest_myBlog/api/post/read_single.php?id=3
-```
+  
+[a link](http://localhost/php_rest_myBlog/api/post/read_single.php?id=3)
 
 ### Create a new post
 - To create a new blog post, make a POST request to:
 
-```bash
-http://localhost/php_rest_myBlog/api/post/create.php
-```
+[a link](http://localhost/php_rest_myBlog/api/post/create.php)
 
 - Include the post details in the request body as a JSON object:
 ```json
@@ -83,9 +81,35 @@ http://localhost/php_rest_myBlog/api/post/create.php
 }
 ```
 
- 
- 
-......
+### Update a Post
+- To update an existing blog post, make a PUT request to:
+
+[a link](http://localhost/php_rest_myBlog/api/post/update.php)
+
+- Include the post details and the post ID in the request body as a JSON object:
+
+```json
+{
+    "id": "15",
+    "title": "Updated Title",
+    "body": "Updated post content.",
+    "author": "Updated Author",
+    "category_id": "2"
+}
+```
+
+#### Check Specific Information from ID 15
+
+To retrieve information about a specific blog post using a GET request, you can follow these steps:
+
+1. Open your favorite API testing tool (e.g., Postman).
+
+2. Make a POST request to the following URL:
+
+[a link](http://localhost/php_rest_myBlog/api/post/read_single.php?id=15)
+
+
+.............
 
 
 
