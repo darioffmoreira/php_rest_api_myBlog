@@ -2,7 +2,7 @@
 
   class Post {
     // DB stuff
-    private $conn;
+    private $connection;
     private $table = 'posts';
 
     // Post Properties
@@ -16,7 +16,7 @@
 
     // Constructor with DB
     public function __construct($db) {
-      $this->conn = $db;
+      $this->connection = $db;
     }
 
     // --------------------------- Get Posts : BEGIN
@@ -39,11 +39,11 @@
               p.created_at DESC';
 
         // Prepare statement
-        $stmt = $this->conn->prepare($query);
+        $statement = $this->connection->prepare($query);
 
-        $stmt->execute();
+        $statement->execute();
 
-        return $stmt;
+        return $statement;
     }
 
     // --------------------------- Get Posts : END
@@ -70,7 +70,7 @@
         LIMIT 0,1';
 
         // Prepare statement
-        $stmt = $this->conn->prepare($query);
+        $stmt = $this->connection->prepare($query);
 
         // Bind ID
         $stmt->bindParam(1, $this->id);
@@ -103,7 +103,7 @@
           category_id = :category_id';
 
       // Prepare statement
-      $statement = $this->conn->prepare($query);
+      $statement = $this->connection->prepare($query);
 
       // Clear data
       $this->title = htmlspecialchars(strip_tags($this->title));
@@ -143,7 +143,7 @@
         id = :id';
 
       // Prepare statement
-      $statement = $this->conn->prepare($query);
+      $statement = $this->connection->prepare($query);
 
       // Clear data
       $this->title = htmlspecialchars(strip_tags($this->title));
@@ -179,7 +179,7 @@
         $query = 'DELETE FROM ' . $this->table. ' WHERE id = :id';
 
         // Prepare statement
-        $statement = $this->conn->prepare($query);
+        $statement = $this->connection->prepare($query);
 
         // Clear data
         $this->id = htmlspecialchars(strip_tags($this->id));

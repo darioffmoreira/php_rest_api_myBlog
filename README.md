@@ -16,6 +16,7 @@ This is a simple PHP REST API for managing blog posts.
     - [Update a Post](#update-a-post)
       - [Check data](#check-data)
     - [Delete a Post](#delete-a-post)
+    - [Read Categories](#read-categories)
   - [License](#license)
 
 ## Features
@@ -134,7 +135,47 @@ http://localhost/php_rest_myBlog/api/post/delete.php
 }
 ```
 
+### Read Categories
+
+- To retrieve a list of all blog categories, make a GET request to:
+
+```bash
+http://localhost/php_rest_myBlog/api/category/read.php
+```
+
+- A successful request will return a JSON response containing the list of categories:
+
+```json
+{
+    "data": [
+        {
+            "id": "1",
+            "name": "Technology"
+        },
+        {
+            "id": "2",
+            "name": "Gaming"
+        },
+        {
+            "id": "3",
+            "name": "Auto"
+        },
+        {
+            "id": "4",
+            "name": "Entertainment"
+        },
+        {
+            "id": "5",
+            "name": "Books"
+        }
+    ]
+}
+```
+
+
 keeping working ...
+
+
 
 ## License
 - This project is licensed under the MIT License.
