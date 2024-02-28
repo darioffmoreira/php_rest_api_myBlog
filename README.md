@@ -17,6 +17,7 @@ This is a simple PHP REST API for managing blog posts.
       - [Check data](#check-data)
     - [Delete a Post](#delete-a-post)
     - [Read Categories](#read-categories)
+    - [Read Single Category](#read-single-category)
   - [License](#license)
 
 ## Features
@@ -171,6 +172,24 @@ http://localhost/php_rest_myBlog/api/category/read.php
     ]
 }
 ```
+
+### Read Single Category
+
+- To retrieve information about a specific blog category, make a GET request to the following URL:
+
+```bash
+http://localhost/php_rest_myBlog/api/category/read_single.php?id=2
+```
+
+Response:
+
+```json
+{
+    "id": 2,
+    "name": "Category Name"
+}
+```
+
 
 
 keeping working ...

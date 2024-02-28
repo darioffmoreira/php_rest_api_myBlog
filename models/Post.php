@@ -70,16 +70,16 @@
         LIMIT 0,1';
 
         // Prepare statement
-        $stmt = $this->connection->prepare($query);
+        $statement = $this->connection->prepare($query);
 
         // Bind ID
-        $stmt->bindParam(1, $this->id);
+        $statement->bindParam(1, $this->id);
 
         // Execute query
-        $stmt->execute();
+        $statement->execute();
 
         // Assign propertys
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
 
         // Set properties
         $this->title = $row['title'];
